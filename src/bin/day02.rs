@@ -153,13 +153,13 @@ fn main() -> Result<()> {
 }
 
 #[cfg(test)]
-mod tests {
+mod tests_day02 {
     use super::*;
     use advent_of_code_2023::test_helpers::create_example_file;
     use indoc::indoc;
 
     #[test]
-    fn test_d01_examples() {
+    fn test_example() {
         let (dir, file) = create_example_file(
             indoc! {"
             Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green

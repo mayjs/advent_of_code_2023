@@ -67,13 +67,13 @@ fn main() -> Result<()> {
 }
 
 #[cfg(test)]
-mod tests {
+mod tests_day01 {
     use super::*;
     use advent_of_code_2023::test_helpers::create_example_file;
     use indoc::indoc;
 
     #[test]
-    fn test_d01_examples() {
+    fn test_part1_example() {
         let (dir, file) = create_example_file(
             indoc! {"
             1abc2
@@ -88,7 +88,7 @@ mod tests {
     }
 
     #[test]
-    fn test_d01_part2_example() {
+    fn test_part2_example() {
         let (dir, file) = create_example_file(
             indoc! {"
             two1nine

@@ -82,13 +82,13 @@ fn main() -> Result<()> {
 }
 
 #[cfg(test)]
-mod tests {
+mod tests_day04 {
     use super::*;
     use advent_of_code_2023::test_helpers::create_example_file;
     use indoc::indoc;
 
     #[test]
-    fn test_d04_examples() {
+    fn test_example() {
         let (dir, file) = create_example_file(
             indoc! {"
             Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53

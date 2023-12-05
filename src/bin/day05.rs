@@ -314,13 +314,13 @@ fn main() -> Result<()> {
 }
 
 #[cfg(test)]
-mod tests {
+mod tests_day05 {
     use super::*;
     use advent_of_code_2023::test_helpers::create_example_file;
     use indoc::indoc;
 
     #[test]
-    fn test_d05_examples() {
+    fn test_example() {
         let (dir, file) = create_example_file(
             indoc! {"
             seeds: 79 14 55 13
