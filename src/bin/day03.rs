@@ -2,7 +2,7 @@ use regex::Regex;
 use std::collections::HashMap;
 use std::path::Path;
 
-use advent_of_code_2023::stream_items_from_file;
+use advent_of_code_2023::read_lines;
 use anyhow::Result;
 
 const INPUT: &str = "input/day03.txt";
@@ -92,7 +92,7 @@ impl SymbolMap {
 }
 
 fn part1<P: AsRef<Path>>(input: P) -> Result<usize> {
-    let lines: Vec<_> = stream_items_from_file::<_, String>(input)?
+    let lines: Vec<_> = read_lines(input)?
         .map(|item| item.unwrap())
         .collect();
 
@@ -152,7 +152,7 @@ impl Default for PotentialGearInfo {
 fn part2<P: AsRef<Path>>(input: P) -> Result<usize> {
     let mut potential_gear_map: HashMap<(usize, usize), PotentialGearInfo> = HashMap::new();
 
-    let lines: Vec<_> = stream_items_from_file::<_, String>(input)?
+    let lines: Vec<_> = read_lines(input)?
         .map(|item| item.unwrap())
         .collect();
 

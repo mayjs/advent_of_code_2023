@@ -1,6 +1,6 @@
 use std::{collections::HashMap, path::Path};
 
-use advent_of_code_2023::stream_items_from_file;
+use advent_of_code_2023::read_lines;
 use anyhow::{anyhow, Result};
 use regex::Regex;
 
@@ -29,7 +29,7 @@ fn triple_to_number(triple: &str) -> usize {
 impl PuzzleInput {
     fn try_from_input<P: AsRef<Path>>(input: P) -> Result<Self> {
         let triple_re = Regex::new(r"\w{3}")?;
-        let mut lines = stream_items_from_file::<_, String>(input)?;
+        let mut lines = read_lines(input)?;
 
         let instructions = lines
             .next()

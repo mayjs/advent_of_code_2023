@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use advent_of_code_2023::stream_items_from_file;
+use advent_of_code_2023::read_lines;
 use anyhow::Result;
 
 const INPUT: &str = "input/day06.txt";
@@ -39,7 +39,7 @@ fn get_beating_range(time_limit: usize, distance_record: usize) -> (usize, usize
 }
 
 fn part1<P: AsRef<Path>>(input: P) -> Result<usize> {
-    let mut lines = stream_items_from_file::<_, String>(input)?;
+    let mut lines = read_lines(input)?;
     let times = lines
         .next()
         .unwrap()?
@@ -66,7 +66,7 @@ fn part1<P: AsRef<Path>>(input: P) -> Result<usize> {
 }
 
 fn part2<P: AsRef<Path>>(input: P) -> Result<usize> {
-    let mut lines = stream_items_from_file::<_, String>(input)?;
+    let mut lines = read_lines(input)?;
     let time = lines
         .next()
         .unwrap()?
