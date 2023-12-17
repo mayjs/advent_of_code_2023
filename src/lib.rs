@@ -4,6 +4,7 @@ use std::marker::PhantomData;
 use std::path::Path;
 use std::str::FromStr;
 use thiserror::Error;
+pub mod render_grid;
 
 #[derive(Error, Debug)]
 pub enum InputError<T> {
